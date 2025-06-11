@@ -1,0 +1,4483 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Premium AVIF to JPG Converter | Fast, Free Image Conversion</title>
+
+
+    <meta name="description" content="Convert AVIF to JPG with our high-quality online tool. Free, secure, and works on all devices. Get perfect JPG images every time!">
+
+    <meta name="keywords" content="AVIF to JPG, image converter, free converter, online tool, AVIF converter, JPG converter">
+
+    <meta name="author" content="Zabardast Tools">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+
+            --primary-color: #6c5ce7;
+
+            --secondary-color: #5649c0;
+
+            --accent-color: #00cec9;
+
+            --light-color: #f8f9fa;
+
+            --dark-color: #2d3436;
+
+            --success-color: #00b894;
+
+            --error-color: #d63031;
+
+            --warning-color: #fdcb6e;
+
+            --border-radius: 12px;
+
+            --box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+        }
+
+
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        body {
+
+            font-family: 'Poppins', sans-serif;
+
+            line-height: 1.7;
+
+            color: var(--dark-color);
+
+            background-color: #f9f9f9;
+
+            display: flex;
+
+            flex-direction: column;
+
+            min-height: 100vh;
+
+            overflow-x: hidden;
+
+        }
+
+
+
+        /* Header Styles */
+
+        header {
+
+            background: var(--gradient);
+
+            color: white;
+
+            padding: 1.2rem 0;
+
+            box-shadow: var(--box-shadow);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            backdrop-filter: blur(5px);
+
+            background-color: rgba(108, 92, 231, 0.9);
+
+        }
+
+
+
+        .header-container {
+
+            width: 90%;
+
+            max-width: 1300px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            font-size: 1.8rem;
+
+            font-weight: 700;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-family: 'Montserrat', sans-serif;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        .logo i {
+
+            margin-right: 0.8rem;
+
+            font-size: 2rem;
+
+            color: var(--accent-color);
+
+        }
+
+
+
+        nav ul {
+
+            display: flex;
+
+            list-style: none;
+
+        }
+
+
+
+        nav ul li {
+
+            margin-left: 2rem;
+
+            position: relative;
+
+        }
+
+
+
+        nav ul li a {
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 500;
+
+            transition: var(--transition);
+
+            padding: 0.5rem 0;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+
+        nav ul li a i {
+
+            margin-right: 0.5rem;
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        nav ul li a:hover {
+
+            color: var(--accent-color);
+
+        }
+
+
+
+        .mobile-menu-btn {
+
+            display: none;
+
+            background: none;
+
+            border: none;
+
+            color: white;
+
+            font-size: 1.8rem;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .mobile-menu-btn:hover {
+
+            color: var(--accent-color);
+
+        }
+
+
+
+        /* Hero Section */
+
+        .hero {
+
+            padding: 5rem 0 4rem;
+
+            background: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1964&q=80') no-repeat center center/cover;
+
+            position: relative;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        .hero::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: rgba(45, 52, 54, 0.7);
+
+            z-index: 0;
+
+        }
+
+
+
+        .hero-container {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+
+
+        .hero h1 {
+
+            font-size: 3.2rem;
+
+            margin-bottom: 1.5rem;
+
+            color: white;
+
+            font-family: 'Montserrat', sans-serif;
+
+            line-height: 1.2;
+
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+        }
+
+
+
+        .hero p {
+
+            font-size: 1.3rem;
+
+            color: rgba(255, 255, 255, 0.9);
+
+            max-width: 800px;
+
+            margin: 0 auto 2.5rem;
+
+        }
+
+
+
+        .cta-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 1.5rem;
+
+            margin-top: 2rem;
+
+        }
+
+
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 1rem 2rem;
+
+            border-radius: var(--border-radius);
+
+            font-size: 1.1rem;
+
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition: var(--transition);
+
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+
+
+        .btn-primary {
+
+            background-color: var(--accent-color);
+
+            color: var(--dark-color);
+
+            box-shadow: 0 4px 15px rgba(0, 206, 201, 0.3);
+
+        }
+
+
+
+        .btn-primary:hover {
+
+            background-color: #00b5b0;
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(0, 206, 201, 0.4);
+
+        }
+
+
+
+        .btn-secondary {
+
+            background-color: transparent;
+
+            color: white;
+
+            border: 2px solid white;
+
+        }
+
+
+
+        .btn-secondary:hover {
+
+            background-color: rgba(255, 255, 255, 0.1);
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        /* Converter Tool Section */
+
+        .converter-section {
+
+            padding: 4rem 0;
+
+            position: relative;
+
+        }
+
+
+
+        .converter-container {
+
+            width: 90%;
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .converter-header {
+
+            text-align: center;
+
+            margin-bottom: 3rem;
+
+        }
+
+
+
+        .converter-header h2 {
+
+            font-size: 2.5rem;
+
+            color: var(--primary-color);
+
+            margin-bottom: 1rem;
+
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+
+
+        .converter-header p {
+
+            color: #666;
+
+            font-size: 1.1rem;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .converter-card {
+
+            background-color: white;
+
+            border-radius: var(--border-radius);
+
+            box-shadow: var(--box-shadow);
+
+            padding: 2.5rem;
+
+            position: relative;
+
+            overflow: hidden;
+
+            z-index: 1;
+
+        }
+
+
+
+        .converter-card::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 5px;
+
+            background: var(--gradient);
+
+        }
+
+
+
+        .converter-tool {
+
+            border: 2px dashed #ddd;
+
+            border-radius: var(--border-radius);
+
+            padding: 2.5rem;
+
+            text-align: center;
+
+            margin-bottom: 2rem;
+
+            transition: var(--transition);
+
+            position: relative;
+
+        }
+
+
+
+        .converter-tool:hover {
+
+            border-color: var(--primary-color);
+
+            box-shadow: 0 5px 15px rgba(108, 92, 231, 0.1);
+
+        }
+
+
+
+        .converter-tool.active {
+
+            border-color: var(--success-color);
+
+            background-color: rgba(0, 184, 148, 0.03);
+
+        }
+
+
+
+        .upload-icon {
+
+            font-size: 3.5rem;
+
+            color: var(--primary-color);
+
+            margin-bottom: 1.5rem;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .converter-tool h3 {
+
+            margin-bottom: 1rem;
+
+            font-size: 1.5rem;
+
+            color: var(--dark-color);
+
+        }
+
+
+
+        .converter-tool p {
+
+            margin-bottom: 1.5rem;
+
+            color: #777;
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        .file-input {
+
+            display: none;
+
+        }
+
+
+
+        .upload-btn {
+
+            background: var(--gradient);
+
+            color: white;
+
+            border: none;
+
+            padding: 1rem 2rem;
+
+            border-radius: var(--border-radius);
+
+            font-size: 1.1rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            display: inline-flex;
+
+            align-items: center;
+
+            margin-bottom: 1.5rem;
+
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+
+        }
+
+
+
+        .upload-btn i {
+
+            margin-right: 0.7rem;
+
+        }
+
+
+
+        .upload-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+
+        }
+
+
+
+        .file-info {
+
+            margin-top: 1.5rem;
+
+            font-size: 1rem;
+
+            color: #666;
+
+            text-align: left;
+
+            background: #f8f9fa;
+
+            padding: 1rem;
+
+            border-radius: var(--border-radius);
+
+            display: none;
+
+        }
+
+
+
+        .file-details {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 0.5rem;
+
+        }
+
+
+
+        .file-name {
+
+            font-weight: 600;
+
+            color: var(--dark-color);
+
+            white-space: nowrap;
+
+            overflow: hidden;
+
+            text-overflow: ellipsis;
+
+            max-width: 70%;
+
+        }
+
+
+
+        .file-size {
+
+            color: var(--primary-color);
+
+            font-weight: 500;
+
+        }
+
+
+
+        .progress-container {
+
+            width: 100%;
+
+            height: 8px;
+
+            background: #f1f1f1;
+
+            border-radius: 4px;
+
+            margin-top: 1rem;
+
+            overflow: hidden;
+
+            display: none;
+
+        }
+
+
+
+        .progress-bar {
+
+            height: 100%;
+
+            background: var(--gradient);
+
+            border-radius: 4px;
+
+            width: 0%;
+
+            transition: width 0.3s ease;
+
+        }
+
+
+
+        .action-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 1.5rem;
+
+            margin-top: 2rem;
+
+        }
+
+
+
+        .convert-btn {
+
+            background: var(--gradient);
+
+            color: white;
+
+            border: none;
+
+            padding: 1rem 2rem;
+
+            border-radius: var(--border-radius);
+
+            font-size: 1.1rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            display: none;
+
+            align-items: center;
+
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+
+        }
+
+
+
+        .convert-btn i {
+
+            margin-right: 0.7rem;
+
+        }
+
+
+
+        .convert-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+
+        }
+
+
+
+        .download-btn {
+
+            background-color: var(--success-color);
+
+            color: white;
+
+            border: none;
+
+            padding: 1rem 2rem;
+
+            border-radius: var(--border-radius);
+
+            font-size: 1.1rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            display: none;
+
+            align-items: center;
+
+            text-decoration: none;
+
+            box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+
+        }
+
+
+
+        .download-btn i {
+
+            margin-right: 0.7rem;
+
+        }
+
+
+
+        .download-btn:hover {
+
+            background-color: #00a884;
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(0, 184, 148, 0.4);
+
+        }
+
+
+
+        .reset-btn {
+
+            background-color: var(--error-color);
+
+            color: white;
+
+            border: none;
+
+            padding: 1rem 2rem;
+
+            border-radius: var(--border-radius);
+
+            font-size: 1.1rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            display: none;
+
+            align-items: center;
+
+            box-shadow: 0 4px 15px rgba(214, 48, 49, 0.3);
+
+        }
+
+
+
+        .reset-btn i {
+
+            margin-right: 0.7rem;
+
+        }
+
+
+
+        .reset-btn:hover {
+
+            background-color: #c02b2b;
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(214, 48, 49, 0.4);
+
+        }
+
+
+
+        .error-message {
+
+            color: var(--error-color);
+
+            margin-top: 1.5rem;
+
+            display: none;
+
+            background: rgba(214, 48, 49, 0.1);
+
+            padding: 1rem;
+
+            border-radius: var(--border-radius);
+
+            text-align: center;
+
+            font-weight: 500;
+
+        }
+
+
+
+        .error-message i {
+
+            margin-right: 0.5rem;
+
+        }
+
+
+
+        .loading {
+
+            display: none;
+
+            margin: 1.5rem auto;
+
+            text-align: center;
+
+        }
+
+
+
+        .spinner {
+
+            border: 5px solid rgba(0, 0, 0, 0.1);
+
+            border-radius: 50%;
+
+            border-top: 5px solid var(--primary-color);
+
+            width: 50px;
+
+            height: 50px;
+
+            animation: spin 1s linear infinite;
+
+            margin: 0 auto 1rem;
+
+        }
+
+
+
+        @keyframes spin {
+
+            0% { transform: rotate(0deg); }
+
+            100% { transform: rotate(360deg); }
+
+        }
+
+
+
+        .loading p {
+
+            font-size: 1.1rem;
+
+            color: var(--dark-color);
+
+            font-weight: 500;
+
+        }
+
+
+
+        /* Features Section */
+
+        .features-section {
+
+            padding: 5rem 0;
+
+            background-color: white;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .features-section::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            background: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+
+            opacity: 0.03;
+
+            z-index: 0;
+
+        }
+
+
+
+        .features-container {
+
+            width: 90%;
+
+            max-width: 1300px;
+
+            margin: 0 auto;
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+
+
+        .section-header {
+
+            text-align: center;
+
+            margin-bottom: 4rem;
+
+        }
+
+
+
+        .section-header h2 {
+
+            font-size: 2.5rem;
+
+            color: var(--primary-color);
+
+            margin-bottom: 1.5rem;
+
+            font-family: 'Montserrat', sans-serif;
+
+            position: relative;
+
+            display: inline-block;
+
+        }
+
+
+
+        .section-header h2::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: -10px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: 80px;
+
+            height: 4px;
+
+            background: var(--gradient);
+
+            border-radius: 2px;
+
+        }
+
+
+
+        .section-header p {
+
+            color: #666;
+
+            font-size: 1.1rem;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .features-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+            gap: 2.5rem;
+
+        }
+
+
+
+        .feature-card {
+
+            background-color: white;
+
+            border-radius: var(--border-radius);
+
+            padding: 2.5rem;
+
+            text-align: center;
+
+            transition: var(--transition);
+
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+
+            border: 1px solid #eee;
+
+            position: relative;
+
+            overflow: hidden;
+
+            z-index: 1;
+
+        }
+
+
+
+        .feature-card::before {
+
+            content: '';
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 5px;
+
+            background: var(--gradient);
+
+        }
+
+
+
+        .feature-card:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        .feature-icon {
+
+            font-size: 3rem;
+
+            color: var(--primary-color);
+
+            margin-bottom: 1.5rem;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .feature-card:hover .feature-icon {
+
+            color: var(--accent-color);
+
+            transform: scale(1.1);
+
+        }
+
+
+
+        .feature-card h3 {
+
+            margin-bottom: 1.5rem;
+
+            font-size: 1.5rem;
+
+            color: var(--dark-color);
+
+        }
+
+
+
+        .feature-card p {
+
+            color: #666;
+
+            font-size: 1.05rem;
+
+        }
+
+
+
+        /* Testimonials Section */
+
+        .testimonials-section {
+
+            padding: 5rem 0;
+
+            background: linear-gradient(135deg, #f5f7ff, #e6ebff);
+
+        }
+
+
+
+        .testimonials-container {
+
+            width: 90%;
+
+            max-width: 1300px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .testimonials-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 2rem;
+
+            margin-top: 3rem;
+
+        }
+
+
+
+        .testimonial-card {
+
+            background-color: white;
+
+            border-radius: var(--border-radius);
+
+            padding: 2rem;
+
+            box-shadow: var(--box-shadow);
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .testimonial-card:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+
+        .testimonial-header {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 1.5rem;
+
+        }
+
+
+
+        .testimonial-avatar {
+
+            width: 60px;
+
+            height: 60px;
+
+            border-radius: 50%;
+
+            object-fit: cover;
+
+            margin-right: 1.5rem;
+
+            border: 3px solid var(--primary-color);
+
+        }
+
+
+
+        .testimonial-author {
+
+            font-weight: 600;
+
+            color: var(--dark-color);
+
+            margin-bottom: 0.3rem;
+
+        }
+
+
+
+        .testimonial-role {
+
+            color: var(--primary-color);
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        .testimonial-text {
+
+            color: #555;
+
+            font-style: italic;
+
+            margin-bottom: 1.5rem;
+
+            position: relative;
+
+        }
+
+
+
+        .testimonial-text::before,
+
+        .testimonial-text::after {
+
+            content: '"';
+
+            font-size: 2rem;
+
+            color: var(--accent-color);
+
+            opacity: 0.3;
+
+            position: absolute;
+
+        }
+
+
+
+        .testimonial-text::before {
+
+            top: -15px;
+
+            left: -10px;
+
+        }
+
+
+
+        .testimonial-text::after {
+
+            bottom: -25px;
+
+            right: -10px;
+
+        }
+
+
+
+        .testimonial-rating {
+
+            color: var(--warning-color);
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        /* Stats Section */
+
+        .stats-section {
+
+            padding: 4rem 0;
+
+            background: var(--gradient);
+
+            color: white;
+
+        }
+
+
+
+        .stats-container {
+
+            width: 90%;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .stats-grid {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 2rem;
+
+            text-align: center;
+
+        }
+
+
+
+        .stat-item {
+
+            padding: 2rem;
+
+        }
+
+
+
+        .stat-number {
+
+            font-size: 3rem;
+
+            font-weight: 700;
+
+            margin-bottom: 0.5rem;
+
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+
+
+        .stat-label {
+
+            font-size: 1.1rem;
+
+            opacity: 0.9;
+
+        }
+
+
+
+        /* SEO Content Section */
+
+        .seo-section {
+
+            padding: 5rem 0;
+
+            background-color: white;
+
+        }
+
+
+
+        .seo-container {
+
+            width: 90%;
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .seo-content {
+
+            background: #f9f9f9;
+
+            border-radius: var(--border-radius);
+
+            padding: 3rem;
+
+            box-shadow: var(--box-shadow);
+
+        }
+
+
+
+        .seo-content h2 {
+
+            font-size: 2.2rem;
+
+            color: var(--primary-color);
+
+            margin-bottom: 2rem;
+
+            text-align: center;
+
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+
+
+        .seo-content h3 {
+
+            font-size: 1.6rem;
+
+            color: var(--secondary-color);
+
+            margin: 2.5rem 0 1.5rem;
+
+            position: relative;
+
+            padding-left: 1.5rem;
+
+        }
+
+
+
+        .seo-content h3::before {
+
+            content: '';
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0.5rem;
+
+            height: 1.8rem;
+
+            width: 5px;
+
+            background: var(--gradient);
+
+            border-radius: 3px;
+
+        }
+
+
+
+        .seo-content p {
+
+            margin-bottom: 1.5rem;
+
+            color: #555;
+
+            line-height: 1.8;
+
+            font-size: 1.05rem;
+
+        }
+
+
+
+        .seo-content ul {
+
+            margin-bottom: 2rem;
+
+            padding-left: 2rem;
+
+        }
+
+
+
+        .seo-content li {
+
+            margin-bottom: 1rem;
+
+            color: #555;
+
+            position: relative;
+
+            line-height: 1.7;
+
+        }
+
+
+
+        .seo-content li::before {
+
+            content: '•';
+
+            color: var(--primary-color);
+
+            font-weight: bold;
+
+            display: inline-block;
+
+            width: 1em;
+
+            margin-left: -1em;
+
+        }
+
+
+
+        /* FAQ Section */
+
+        .faq-section {
+
+            padding: 5rem 0;
+
+            background: linear-gradient(135deg, #f5f7ff, #e6ebff);
+
+        }
+
+
+
+        .faq-container {
+
+            width: 90%;
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .faq-item {
+
+            background-color: white;
+
+            border-radius: var(--border-radius);
+
+            margin-bottom: 1.5rem;
+
+            box-shadow: var(--box-shadow);
+
+            overflow: hidden;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .faq-item:hover {
+
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        .faq-question {
+
+            padding: 1.8rem;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+            font-size: 1.1rem;
+
+            transition: var(--transition);
+
+            color: var(--dark-color);
+
+        }
+
+
+
+        .faq-question:hover {
+
+            background-color: #f8f9fa;
+
+            color: var(--primary-color);
+
+        }
+
+
+
+        .faq-question i {
+
+            transition: var(--transition);
+
+            color: var(--primary-color);
+
+        }
+
+
+
+        .faq-answer {
+
+            padding: 0 1.8rem;
+
+            max-height: 0;
+
+            overflow: hidden;
+
+            transition: var(--transition);
+
+            color: #666;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        .faq-item.active .faq-question {
+
+            background-color: #f8f9fa;
+
+        }
+
+
+
+        .faq-item.active .faq-question i {
+
+            transform: rotate(180deg);
+
+        }
+
+
+
+        .faq-item.active .faq-answer {
+
+            padding: 0 1.8rem 1.8rem;
+
+            max-height: 500px;
+
+        }
+
+
+
+        /* Feedback Section */
+
+        .feedback-section {
+
+            padding: 5rem 0;
+
+            background-color: white;
+
+        }
+
+
+
+        .feedback-container {
+
+            width: 90%;
+
+            max-width: 700px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .feedback-form {
+
+            background: #f9f9f9;
+
+            border-radius: var(--border-radius);
+
+            padding: 3rem;
+
+            box-shadow: var(--box-shadow);
+
+        }
+
+
+
+        .form-group {
+
+            margin-bottom: 1.5rem;
+
+        }
+
+
+
+        .form-label {
+
+            display: block;
+
+            margin-bottom: 0.5rem;
+
+            font-weight: 500;
+
+            color: var(--dark-color);
+
+        }
+
+
+
+        .form-control {
+
+            width: 100%;
+
+            padding: 1rem;
+
+            border: 1px solid #ddd;
+
+            border-radius: var(--border-radius);
+
+            font-family: 'Poppins', sans-serif;
+
+            font-size: 1rem;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .form-control:focus {
+
+            outline: none;
+
+            border-color: var(--primary-color);
+
+            box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2);
+
+        }
+
+
+
+        textarea.form-control {
+
+            min-height: 150px;
+
+            resize: vertical;
+
+        }
+
+
+
+        .rating-input {
+
+            display: flex;
+
+            gap: 0.5rem;
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .rating-star {
+
+            font-size: 1.8rem;
+
+            color: #ddd;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+        }
+
+
+
+        .rating-star.active {
+
+            color: var(--warning-color);
+
+        }
+
+
+
+        .submit-btn {
+
+            background: var(--gradient);
+
+            color: white;
+
+            border: none;
+
+            padding: 1rem 2rem;
+
+            border-radius: var(--border-radius);
+
+            font-size: 1.1rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: var(--transition);
+
+            width: 100%;
+
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+
+        }
+
+
+
+        .submit-btn:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+
+        }
+
+
+
+        .feedback-thank-you {
+
+            text-align: center;
+
+            display: none;
+
+        }
+
+
+
+        .feedback-thank-you i {
+
+            font-size: 4rem;
+
+            color: var(--success-color);
+
+            margin-bottom: 1.5rem;
+
+        }
+
+
+
+        .feedback-thank-you h3 {
+
+            font-size: 2rem;
+
+            margin-bottom: 1rem;
+
+            color: var(--primary-color);
+
+        }
+
+
+
+        .feedback-thank-you p {
+
+            color: #666;
+
+            font-size: 1.1rem;
+
+        }
+
+
+
+        /* CTA Section */
+
+        .cta-section {
+
+            padding: 5rem 0;
+
+            background: var(--gradient);
+
+            color: white;
+
+            text-align: center;
+
+        }
+
+
+
+        .cta-container {
+
+            width: 90%;
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+        }
+
+
+
+        .cta-section h2 {
+
+            font-size: 2.5rem;
+
+            margin-bottom: 1.5rem;
+
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+
+
+        .cta-section p {
+
+            font-size: 1.2rem;
+
+            opacity: 0.9;
+
+            margin-bottom: 2.5rem;
+
+            max-width: 700px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+        }
+
+
+
+        /* Footer */
+
+        footer {
+
+            background-color: var(--dark-color);
+
+            color: white;
+
+            padding: 4rem 0 1.5rem;
+
+            margin-top: auto;
+
+        }
+
+
+
+        .footer-container {
+
+            width: 90%;
+
+            max-width: 1300px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 3rem;
+
+        }
+
+
+
+        .footer-about {
+
+            margin-bottom: 2rem;
+
+        }
+
+
+
+        .footer-logo {
+
+            font-size: 1.8rem;
+
+            font-weight: 700;
+
+            margin-bottom: 1.5rem;
+
+            display: inline-block;
+
+            font-family: 'Montserrat', sans-serif;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        .footer-about p {
+
+            color: #aaa;
+
+            margin-bottom: 1.5rem;
+
+            font-size: 1.05rem;
+
+        }
+
+
+
+        .social-links {
+
+            display: flex;
+
+            gap: 1.2rem;
+
+        }
+
+
+
+        .social-links a {
+
+            color: white;
+
+            font-size: 1.3rem;
+
+            transition: var(--transition);
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.1);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .social-links a:hover {
+
+            background: var(--primary-color);
+
+            transform: translateY(-3px);
+
+        }
+
+
+
+        .footer-links h3 {
+
+            font-size: 1.3rem;
+
+            margin-bottom: 1.5rem;
+
+            position: relative;
+
+            padding-bottom: 0.8rem;
+
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+
+
+        .footer-links h3::after {
+
+            content: '';
+
+            position: absolute;
+
+            bottom: 0;
+
+            left: 0;
+
+            width: 50px;
+
+            height: 3px;
+
+            background: var(--accent-color);
+
+            border-radius: 2px;
+
+        }
+
+
+
+        .footer-links ul {
+
+            list-style: none;
+
+        }
+
+
+
+        .footer-links li {
+
+            margin-bottom: 1rem;
+
+        }
+
+
+
+        .footer-links a {
+
+            color: #aaa;
+
+            text-decoration: none;
+
+            transition: var(--transition);
+
+            font-size: 1.05rem;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+
+        .footer-links a i {
+
+            margin-right: 0.7rem;
+
+            font-size: 0.9rem;
+
+            color: var(--accent-color);
+
+        }
+
+
+
+        .footer-links a:hover {
+
+            color: white;
+
+            padding-left: 5px;
+
+        }
+
+
+
+        .footer-contact p {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 0.8rem;
+
+            color: #aaa;
+
+            margin-bottom: 1.5rem;
+
+            font-size: 1.05rem;
+
+        }
+
+
+
+        .footer-contact i {
+
+            color: var(--accent-color);
+
+            font-size: 1.1rem;
+
+            margin-top: 0.2rem;
+
+        }
+
+
+
+        .footer-bottom {
+
+            text-align: center;
+
+            padding-top: 3rem;
+
+            margin-top: 2rem;
+
+            border-top: 1px solid #444;
+
+            color: #777;
+
+            font-size: 0.95rem;
+
+        }
+
+
+
+        /* Responsive Styles */
+
+        @media (max-width: 1200px) {
+
+            .hero h1 {
+
+                font-size: 2.8rem;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 992px) {
+
+            .hero h1 {
+
+                font-size: 2.5rem;
+
+            }
+
+            
+
+            .hero p {
+
+                font-size: 1.2rem;
+
+            }
+
+            
+
+            .section-header h2 {
+
+                font-size: 2.2rem;
+
+            }
+
+            
+
+            .features-grid {
+
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            }
+
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            .header-container {
+
+                position: relative;
+
+            }
+
+
+
+            nav {
+
+                position: absolute;
+
+                top: 100%;
+
+                left: 0;
+
+                width: 100%;
+
+                background-color: var(--secondary-color);
+
+                padding: 1.5rem;
+
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+                display: none;
+
+                backdrop-filter: blur(5px);
+
+                background-color: rgba(86, 73, 192, 0.95);
+
+            }
+
+
+
+            nav.active {
+
+                display: block;
+
+            }
+
+
+
+            nav ul {
+
+                flex-direction: column;
+
+            }
+
+
+
+            nav ul li {
+
+                margin: 0;
+
+                padding: 0.8rem 0;
+
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            }
+
+
+
+            nav ul li:last-child {
+
+                border-bottom: none;
+
+            }
+
+
+
+            nav ul li a {
+
+                padding: 0.5rem 0;
+
+            }
+
+
+
+            .mobile-menu-btn {
+
+                display: block;
+
+            }
+
+
+
+            .hero {
+
+                padding: 4rem 0 3rem;
+
+            }
+
+
+
+            .hero h1 {
+
+                font-size: 2.2rem;
+
+            }
+
+
+
+            .hero p {
+
+                font-size: 1.1rem;
+
+            }
+
+
+
+            .cta-buttons {
+
+                flex-direction: column;
+
+                gap: 1rem;
+
+            }
+
+
+
+            .btn {
+
+                width: 100%;
+
+            }
+
+
+
+            .converter-card {
+
+                padding: 2rem 1.5rem;
+
+            }
+
+
+
+            .converter-tool {
+
+                padding: 2rem 1.5rem;
+
+            }
+
+
+
+            .action-buttons {
+
+                flex-direction: column;
+
+                gap: 1rem;
+
+            }
+
+
+
+            .convert-btn,
+
+            .download-btn,
+
+            .reset-btn {
+
+                width: 100%;
+
+            }
+
+
+
+            .section-header h2 {
+
+                font-size: 2rem;
+
+            }
+
+
+
+            .feature-card {
+
+                padding: 2rem;
+
+            }
+
+
+
+            .seo-content {
+
+                padding: 2rem;
+
+            }
+
+
+
+            .feedback-form {
+
+                padding: 2rem;
+
+            }
+
+
+
+            .cta-section h2 {
+
+                font-size: 2rem;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 576px) {
+
+            .hero h1 {
+
+                font-size: 2rem;
+
+                line-height: 1.3;
+
+            }
+
+
+
+            .converter-header h2 {
+
+                font-size: 1.8rem;
+
+            }
+
+
+
+            .section-header h2 {
+
+                font-size: 1.8rem;
+
+            }
+
+
+
+            .features-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+
+            .seo-content h2 {
+
+                font-size: 1.8rem;
+
+            }
+
+
+
+            .seo-content h3 {
+
+                font-size: 1.4rem;
+
+            }
+
+
+
+            .footer-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+     <header>
+
+        <div class="header-container">
+
+            <a href="#" class="logo">
+
+                <i class="fas fa-exchange-alt"></i>
+
+                <span>AVIF2JPG</span>
+
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+            <nav id="mainNav">
+
+                <ul>
+
+                    <li><a href="#converter"><i class="fas fa-cog"></i> Converter</a></li>
+
+                    <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+
+
+                    <li><a href="#benefits"><i class="fas fa-check-circle"></i> Benefits</a></li>
+
+                    <li><a href="https://otieu.com/4/9339244" target="_blank" rel="noopener noreferrer"><i class="fas fa-comment"></i> Testimonials</a></li>
+
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-container">
+
+            <h1>Premium AVIF to JPG Conversion</h1>
+
+            <p>Convert your AVIF images to high-quality JPG format instantly with our powerful online tool. No registration required, 100% secure, and works on all devices.</p>
+
+            <div class="cta-buttons">
+
+                <a href="#converter" class="btn btn-primary">
+
+                    <i class="fas fa-bolt"></i> Convert Now
+
+                </a>
+
+                <a href="#features" class="btn btn-secondary">
+
+                    <i class="fas fa-info-circle"></i> Learn More
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Converter Tool Section -->
+
+    <section class="converter-section" id="converter">
+
+        <div class="converter-container">
+
+            <div class="converter-header">
+
+                <h2>AVIF to JPG Converter</h2>
+
+                <p>Upload your AVIF file and get a high-quality JPG version in seconds</p>
+
+            </div>
+
+            <div class="converter-card">
+
+                <div class="converter-tool" id="dropArea">
+
+                    <div class="upload-icon">
+
+                        <i class="fas fa-file-image"></i>
+
+                    </div>
+
+                    <h3>Drag & Drop Your AVIF File Here</h3>
+
+                    <p>or</p>
+
+                    <input type="file" id="fileInput" class="file-input" accept=".avif,image/avif">
+
+                    <label for="fileInput" class="upload-btn">
+
+                        <i class="fas fa-folder-open"></i> Choose File
+
+                    </label>
+
+                    <div class="file-info" id="fileInfo">
+
+                        <div class="file-details">
+
+                            <span class="file-name" id="fileName">No file selected</span>
+
+                            <span class="file-size" id="fileSize"></span>
+
+                        </div>
+
+                        <div class="progress-container" id="uploadProgressContainer">
+
+                            <div class="progress-bar" id="uploadProgressBar"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="action-buttons">
+
+                        <button class="convert-btn" id="convertBtn">
+
+                            <i class="fas fa-exchange-alt"></i> Convert to JPG
+
+                        </button>
+
+                        <a href="#" class="download-btn" id="downloadBtn" download>
+
+                            <i class="fas fa-download"></i> Download JPG
+
+                        </a>
+
+                        <button class="reset-btn" id="resetBtn">
+
+                            <i class="fas fa-redo"></i> Reset
+
+                        </button>
+
+                    </div>
+
+                    <div class="loading" id="loading">
+
+                        <div class="spinner"></div>
+
+                        <p>Converting your image...</p> <!-- Message will be updated by JS -->
+
+                        <div class="progress-container" id="convertProgressContainer"> <!-- THIS IS THE CONTAINER FOR CONVERSION PROGRESS -->
+
+                            <div class="progress-bar" id="convertProgressBar"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="error-message" id="errorMessage">
+
+                        <i class="fas fa-exclamation-circle"></i> <span id="errorText">Invalid file type. Please upload an AVIF file.</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Features Section -->
+
+    <section class="features-section" id="features">
+
+        <div class="features-container">
+
+            <div class="section-header">
+
+                <h2>Why Choose Our Converter</h2>
+
+                <p>Experience the best AVIF to JPG conversion with these powerful features</p>
+
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fas fa-rocket"></i>
+
+                    </div>
+
+                    <h3>Ultra Fast</h3>
+
+                    <p>Our optimized conversion algorithm processes images in seconds, saving you valuable time.</p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fas fa-shield-alt"></i>
+
+                    </div>
+
+                    <h3>Privacy Focused</h3>
+
+                    <p>Your files never leave your device. All processing happens locally in your browser.</p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fas fa-gem"></i>
+
+                    </div>
+
+                    <h3>Premium Quality</h3>
+
+                    <p>Get JPG images with minimal quality loss thanks to our advanced conversion technology.</p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fas fa-mobile-alt"></i>
+
+                    </div>
+
+                    <h3>Any Device</h3>
+
+                    <p>Works perfectly on smartphones, tablets, laptops, and desktop computers.</p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fas fa-layer-group"></i>
+
+                    </div>
+
+                    <h3>Batch Processing</h3>
+
+                    <p>Convert multiple AVIF files to JPG at once, saving time when working with many images.</p>
+
+                </div>
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fas fa-gift"></i>
+
+                    </div>
+
+                    <h3>Completely Free</h3>
+
+                    <p>No hidden charges, no watermarks, no registration required. Free to use forever.</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Stats Section -->
+
+    <section class="stats-section">
+
+        <div class="stats-container">
+
+            <div class="stats-grid">
+
+                <div class="stat-item">
+
+                    <div class="stat-number" id="conversionsCount">10,000+</div>
+
+                    <div class="stat-label">Successful Conversions</div>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <div class="stat-number">100%</div>
+
+                    <div class="stat-label">Privacy Guaranteed</div>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <div class="stat-number">0</div>
+
+                    <div class="stat-label">Files Uploaded</div>
+
+                </div>
+
+                <div class="stat-item">
+
+                    <div class="stat-number">24/7</div>
+
+                    <div class="stat-label">Availability</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Benefits Section -->
+
+    <section class="testimonials-section" id="benefits">
+
+        <div class="testimonials-container">
+
+            <div class="section-header">
+
+                <h2>Benefits of Converting AVIF to JPG</h2>
+
+                <p>Discover why converting your AVIF images to JPG can be beneficial for your workflow</p>
+
+            </div>
+
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+
+                    <div class="testimonial-header">
+
+                        <img src="https://randomuser.me/api/portraits/lego/1.jpg" alt="Benefit Icon 1" class="testimonial-avatar">
+
+                        <div>
+
+                            <div class="testimonial-author">Increased Compatibility</div>
+
+                            <div class="testimonial-role">Works Everywhere</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="testimonial-text">
+
+                        JPG is universally supported by all browsers, devices, and image editing software, ensuring your images display correctly everywhere.
+
+                    </div>
+
+                    <div class="testimonial-rating">
+
+                        <i class="fas fa-check-circle" style="color: var(--success-color);"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+
+                    <div class="testimonial-header">
+
+                        <img src="https://randomuser.me/api/portraits/lego/2.jpg" alt="Benefit Icon 2" class="testimonial-avatar">
+
+                        <div>
+
+                            <div class="testimonial-author">Social Media Ready</div>
+
+                            <div class="testimonial-role">Easy Sharing</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="testimonial-text">
+
+                        Most social media platforms prefer or only accept JPG images, making conversion essential for online sharing and marketing.
+
+                    </div>
+
+                     <div class="testimonial-rating">
+
+                        <i class="fas fa-check-circle" style="color: var(--success-color);"></i>
+
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+
+                    <div class="testimonial-header">
+
+                        <img src="https://randomuser.me/api/portraits/lego/3.jpg" alt="Benefit Icon 3" class="testimonial-avatar">
+
+                        <div>
+
+                            <div class="testimonial-author">Smaller File Sizes</div>
+
+                            <div class="testimonial-role">Than Uncompressed Formats</div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="testimonial-text">
+
+                        While AVIF offers better compression, JPG still provides good quality at manageable file sizes suitable for web and email.
+
+                    </div>
+
+                     <div class="testimonial-rating">
+
+                        <i class="fas fa-check-circle" style="color: var(--success-color);"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- SEO Content Section -->
+
+    <section class="seo-section">
+
+        <div class="seo-container">
+
+            <div class="seo-content">
+
+                <h2>AVIF vs JPG: Understanding Image Formats</h2>
+
+                
+
+                <h3>What is AVIF Format?</h3>
+
+                <p>AVIF (AV1 Image File Format) is a modern, royalty-free image format based on the AV1 video codec. It offers superior compression efficiency compared to older formats like JPEG, WebP, and PNG. AVIF supports high dynamic range (HDR), wide color gamut, and advanced compression techniques that can significantly reduce file sizes while maintaining excellent image quality.</p>
+
+                
+
+                <h3>What is JPG Format?</h3>
+
+                <p>JPEG (Joint Photographic Experts Group) is one of the most widely used image formats, particularly for photographs and complex images. It uses lossy compression to reduce file sizes, making it ideal for web use where bandwidth is a concern. Despite being an older format, JPG remains popular due to its universal compatibility and good balance between quality and file size.</p>
+
+                
+
+                <h3>When to Use AVIF vs JPG</h3>
+
+                <p>While AVIF offers technical advantages, there are situations where JPG might be the better choice:</p>
+
+                <ul>
+
+                    <li><strong>Compatibility:</strong> JPG works everywhere, while AVIF support is still growing</li>
+
+                    <li><strong>Legacy Systems:</strong> Older devices and software may not support AVIF</li>
+
+                    <li><strong>Social Media:</strong> Many platforms don't yet accept AVIF uploads</li>
+
+                    <li><strong>Quick Processing:</strong> AVIF encoding can be slower than JPG</li>
+
+                </ul>
+
+                
+
+                <h3>Why Convert AVIF to JPG?</h3>
+
+                <p>Converting AVIF to JPG makes sense when you need to ensure your images will display properly across all platforms and devices. Our converter provides an easy way to transition between these formats while maintaining the best possible quality in your JPG output.</p>
+
+                
+
+                <h3>SEO Benefits of Image Optimization</h3>
+
+                <p>Properly optimized images contribute to better SEO performance by:</p>
+
+                <ul>
+
+                    <li>Improving page load speed (a Google ranking factor)</li>
+
+                    <li>Reducing bounce rates with faster-loading pages</li>
+
+                    <li>Enhancing user experience with properly displayed images</li>
+
+                    <li>Supporting responsive design across devices</li>
+
+                </ul>
+
+                <p>Our AVIF to JPG converter helps you achieve these SEO benefits by providing properly formatted, optimized images for your website.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FAQ Section -->
+
+    <section class="faq-section" id="faq">
+
+        <div class="faq-container">
+
+            <div class="section-header">
+
+                <h2>Frequently Asked Questions</h2>
+
+                <p>Find answers to common questions about AVIF to JPG conversion</p>
+
+            </div>
+
+            <div class="faq-list">
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <span>Is this AVIF to JPG converter free to use?</span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Yes, our AVIF to JPG converter is completely free to use with no hidden charges. There are no watermarks, no registration required, and no limitations on the number of files you can convert. We believe in providing high-quality tools without putting them behind paywalls.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <span>How does the conversion process work?</span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                         <p>When you upload an AVIF file, our tool attempts to load it as an image. If your browser supports displaying AVIF, we draw it onto an invisible canvas and then export that canvas as a JPG image. All processing happens entirely in your browser, ensuring privacy. This method relies on your browser's native AVIF support.</p>
+
+                         <p><strong>Note:</strong> If your browser cannot display the AVIF file, the conversion to a viewable JPG might not succeed with this method. True cross-browser AVIF decoding often requires specialized JavaScript libraries.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <span>Is there a limit to the file size I can convert?</span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>There's no strict limit, but very large files (e.g., over 20-50MB) might take longer to process or could cause performance issues in the browser, especially on less powerful devices. For best results, we recommend files under 10-15MB when using browser-based conversion.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <span>Will converting to JPG reduce my image quality?</span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>JPG is a lossy compression format, meaning some image data is discarded to reduce file size. So, yes, some quality reduction compared to the original AVIF is inevitable. Our tool aims for a high-quality JPG output (typically around 90% quality) to minimize visible differences for most web use cases.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <span>Can I convert multiple files at once?</span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Currently, our tool supports converting one file at a time. For batch conversion, you would need to convert files individually. We are considering adding batch processing features in a future update.</p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        <span>Is my data safe when using this converter?</span>
+
+                        <i class="fas fa-chevron-down"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        <p>Absolutely! Your files never leave your device. All image processing happens locally in your browser using JavaScript. No files are uploaded to any server, ensuring your data remains private and secure.</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Feedback Section -->
+
+    <section class="feedback-section" id="feedback">
+
+        <div class="feedback-container">
+
+            <div class="section-header">
+
+                <h2>Share Your Feedback</h2>
+
+                <p>We'd love to hear about your experience with our converter</p>
+
+            </div>
+
+            <form class="feedback-form" id="feedbackForm">
+
+                <div class="form-group">
+
+                    <label for="name" class="form-label">Your Name</label>
+
+                    <input type="text" id="name" class="form-control" placeholder="Enter your name">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="email" class="form-label">Email Address (optional)</label>
+
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label class="form-label">Rating</label>
+
+                    <div class="rating-input">
+
+                        <i class="fas fa-star rating-star" data-rating="1"></i>
+
+                        <i class="fas fa-star rating-star" data-rating="2"></i>
+
+                        <i class="fas fa-star rating-star" data-rating="3"></i>
+
+                        <i class="fas fa-star rating-star" data-rating="4"></i>
+
+                        <i class="fas fa-star rating-star" data-rating="5"></i>
+
+                    </div>
+
+                    <input type="hidden" id="rating" value="0">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="message" class="form-label">Your Feedback</label>
+
+                    <textarea id="message" class="form-control" placeholder="Tell us about your experience..."></textarea>
+
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitFeedback">
+
+                    <i class="fas fa-paper-plane"></i> Submit Feedback
+
+                </button>
+
+            </form>
+
+            <div class="feedback-thank-you" id="thankYouMessage">
+
+                <i class="fas fa-check-circle"></i>
+
+                <h3>Thank You!</h3>
+
+                <p>We appreciate your feedback and will use it to improve our service.</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CTA Section -->
+
+    <section class="cta-section">
+
+        <div class="cta-container">
+
+            <h2>Ready to Convert Your Images?</h2>
+
+            <p>Join thousands of satisfied users who trust our AVIF to JPG converter for their image conversion needs.</p>
+
+            <a href="#converter" class="btn btn-primary" style="margin-top: 1.5rem;">
+
+                <i class="fas fa-exchange-alt"></i> Start Converting Now
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+
+                <a href="#" class="footer-logo">
+
+                    <i class="fas fa-exchange-alt"></i> AVIF2JPG
+
+                </a>
+
+                <p>The fastest, most secure way to convert your AVIF images to JPG format. Free to use with no limitations or watermarks.</p>
+
+                <div class="social-links">
+
+                    <a href="https://otieu.com/4/9390883" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+
+                    <a href="https://otieu.com/4/9374401" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+
+                    <a href="https://otieu.com/4/6835760" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+
+                    <a href="https://otieu.com/4/9340469" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#converter"><i class="fas fa-cog"></i> Converter Tool</a></li>
+
+                    <li><a href="#features"><i class="fas fa-star"></i> Features</a></li>
+
+                    <li><a href="#benefits"><i class="fas fa-check-circle"></i> Benefits</a></li>
+
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+
+                    <li><a href="#feedback"><i class="fas fa-comment"></i> Feedback</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Resources</h3>
+
+                <ul>
+
+                    <li><a href="https://otieu.com/4/9390881" target="_blank" rel="noopener noreferrer"><i class="fas fa-book"></i> Image Format Guide</a></li>
+
+                    <li><a href="https://otieu.com/4/9339248" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-alt"></i> AVIF Documentation</a></li>
+
+                    <li><a href="https://otieu.com/4/9339244" target="_blank" rel="noopener noreferrer"><i class="fas fa-images"></i> JPG Optimization Tips</a></li>
+
+                    <li><a href="https://otieu.com/4/9390883" target="_blank" rel="noopener noreferrer"><i class="fas fa-tachometer-alt"></i> Web Performance</a></li>
+
+                    <li><a href="https://otieu.com/4/9374401" target="_blank" rel="noopener noreferrer"><i class="fas fa-search"></i> SEO Best Practices</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-contact">
+
+                <h3>Contact Us</h3>
+
+                <p><i class="fas fa-envelope"></i> support@avif2jpg.com</p>
+
+                <p><i class="fas fa-globe"></i> www.avif2jpg.blogspot.com</p>
+
+                <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© <span id="currentYear"></span> AVIF2JPG Converter. All rights reserved. | <a href="#" style="color: #777;">Privacy Policy</a> | <a href="#" style="color: #777;">Terms of Service</a></p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script>
+
+        // Mobile Menu Toggle
+
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
+        const mainNav = document.getElementById('mainNav');
+
+
+
+        if (mobileMenuBtn && mainNav) {
+
+            mobileMenuBtn.addEventListener('click', () => {
+
+                mainNav.classList.toggle('active');
+
+                mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+
+            });
+
+        }
+
+
+
+
+
+        // FAQ Accordion
+
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        if (faqItems) {
+
+            faqItems.forEach(item => {
+
+                const question = item.querySelector('.faq-question');
+
+                if (question) {
+
+                    question.addEventListener('click', () => {
+
+                        const isActive = item.classList.contains('active');
+
+                        // Optional: Close other FAQs when one is opened
+
+                        // faqItems.forEach(otherItem => {
+
+                        //     if (otherItem !== item) otherItem.classList.remove('active');
+
+                        // });
+
+                        if (!isActive) {
+
+                           item.classList.add('active');
+
+                        } else {
+
+                           item.classList.remove('active');
+
+                        }
+
+                    });
+
+                }
+
+            });
+
+        }
+
+
+
+
+
+        // AVIF to JPG Converter Logic
+
+        const dropArea = document.getElementById('dropArea');
+
+        const fileInput = document.getElementById('fileInput');
+
+        const fileInfo = document.getElementById('fileInfo');
+
+        const fileName = document.getElementById('fileName');
+
+        const fileSize = document.getElementById('fileSize');
+
+        const uploadProgressContainer = document.getElementById('uploadProgressContainer');
+
+        const uploadProgressBar = document.getElementById('uploadProgressBar');
+
+        const convertBtn = document.getElementById('convertBtn');
+
+        const downloadBtn = document.getElementById('downloadBtn');
+
+        const resetBtn = document.getElementById('resetBtn');
+
+        const loading = document.getElementById('loading');
+
+        const convertProgressContainer = document.getElementById('convertProgressContainer');
+
+        const convertProgressBar = document.getElementById('convertProgressBar');
+
+        const errorMessage = document.getElementById('errorMessage');
+
+        const errorText = document.getElementById('errorText');
+
+
+
+        let selectedFile = null;
+
+        let avifFileUrl = null; 
+
+        let jpgFileUrl = null;  
+
+        let conversionProgressInterval = null; 
+
+
+
+        if (dropArea) {
+
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+
+                dropArea.addEventListener(eventName, preventDefaults, false);
+
+                document.body.addEventListener(eventName, preventDefaults, false);
+
+            });
+
+
+
+            function preventDefaults(e) {
+
+                e.preventDefault();
+
+                e.stopPropagation();
+
+            }
+
+
+
+            ['dragenter', 'dragover'].forEach(eventName => dropArea.addEventListener(eventName, highlight, false));
+
+            ['dragleave', 'drop'].forEach(eventName => dropArea.addEventListener(eventName, unhighlight, false));
+
+
+
+            function highlight() { dropArea.classList.add('active'); }
+
+            function unhighlight() { dropArea.classList.remove('active'); }
+
+
+
+            dropArea.addEventListener('drop', (e) => handleFiles(e.dataTransfer.files), false);
+
+        }
+
+
+
+        if (fileInput) {
+
+            fileInput.addEventListener('change', function() { handleFiles(this.files); });
+
+        }
+
+
+
+
+
+        function handleFiles(files) {
+
+            console.log('handleFiles called with:', files);
+
+            if (!files || files.length === 0) {
+
+                console.log('No files selected.');
+
+                return;
+
+            }
+
+            const file = files[0];
+
+            if (!file.name.toLowerCase().endsWith('.avif') && file.type !== 'image/avif') {
+
+                showError('Please select an AVIF file (with .avif extension or image/avif type)');
+
+                return;
+
+            }
+
+            simulateUploadProgress(file);
+
+        }
+
+
+
+        function simulateUploadProgress(file) {
+
+            console.log('simulateUploadProgress for file:', file.name);
+
+            resetConverterState(false);
+
+            selectedFile = file;
+
+
+
+            if(fileInfo) fileInfo.style.display = 'block';
+
+            if(fileName) fileName.textContent = file.name;
+
+            if(fileSize) fileSize.textContent = formatFileSize(file.size);
+
+            if(uploadProgressContainer) uploadProgressContainer.style.display = 'block';
+
+            if(errorMessage) errorMessage.style.display = 'none';
+
+            if(uploadProgressBar) uploadProgressBar.style.width = '0%';
+
+
+
+
+
+            let progress = 0;
+
+            const interval = setInterval(() => {
+
+                progress += Math.random() * 10 + 5;
+
+                if (progress > 100) progress = 100;
+
+                if(uploadProgressBar) uploadProgressBar.style.width = `${progress}%`;
+
+
+
+                if (progress === 100) {
+
+                    clearInterval(interval);
+
+                    console.log('Simulated upload complete.');
+
+                    if(convertBtn) convertBtn.style.display = 'flex';
+
+                    if(resetBtn) resetBtn.style.display = 'flex';
+
+                }
+
+            }, 80);
+
+        }
+
+
+
+        function formatFileSize(bytes) {
+
+            if (bytes === 0) return '0 Bytes';
+
+            const k = 1024;
+
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+
+        }
+
+        
+
+        function stopConversionProgress() {
+
+            if (conversionProgressInterval) {
+
+                clearInterval(conversionProgressInterval);
+
+                conversionProgressInterval = null;
+
+                console.log("Conversion progress animation stopped.");
+
+            }
+
+        }
+
+
+
+        function showError(message) {
+
+            console.error('Error shown:', message);
+
+            stopConversionProgress(); 
+
+            if(loading) loading.style.display = 'none';
+
+            if(convertProgressContainer) convertProgressContainer.style.display = 'none';
+
+            if(convertProgressBar) convertProgressBar.style.width = '0%';
+
+
+
+            if(convertBtn && convertBtn.style.display === 'none' && (!downloadBtn || downloadBtn.style.display === 'none') ) {
+
+                 convertBtn.style.display = 'flex';
+
+            }
+
+            if(resetBtn && resetBtn.style.display === 'none') {
+
+                 resetBtn.style.display = 'flex';
+
+            }
+
+            
+
+            if(errorText) errorText.textContent = message;
+
+            if(errorMessage) errorMessage.style.display = 'block';
+
+        }
+
+
+
+
+
+        if(resetBtn) resetBtn.addEventListener('click', () => resetConverterState(true));
+
+
+
+        function resetConverterState(fullReset = true) {
+
+            console.log('resetConverterState called. fullReset:', fullReset);
+
+            stopConversionProgress();
+
+            selectedFile = null;
+
+            if (avifFileUrl) {
+
+                URL.revokeObjectURL(avifFileUrl);
+
+                console.log('Revoked old AVIF blob URL:', avifFileUrl);
+
+                avifFileUrl = null;
+
+            }
+
+            if (jpgFileUrl) {
+
+                URL.revokeObjectURL(jpgFileUrl);
+
+                console.log('Revoked old JPG blob URL:', jpgFileUrl);
+
+                jpgFileUrl = null;
+
+            }
+
+
+
+            if(fileName) fileName.textContent = 'No file selected';
+
+            if(fileSize) fileSize.textContent = '';
+
+            if(fileInfo) fileInfo.style.display = 'none';
+
+            if(uploadProgressContainer) uploadProgressContainer.style.display = 'none';
+
+            if(uploadProgressBar) uploadProgressBar.style.width = '0%';
+
+            if(convertBtn) convertBtn.style.display = 'none';
+
+            if(downloadBtn) {
+
+                downloadBtn.style.display = 'none';
+
+                downloadBtn.href = '#'; // Reset href
+
+                downloadBtn.removeAttribute('download'); // Remove download attribute
+
+            }
+
+            if(resetBtn) resetBtn.style.display = 'none';
+
+            if(loading) loading.style.display = 'none';
+
+            if(convertProgressContainer) convertProgressContainer.style.display = 'none';
+
+            if(convertProgressBar) convertProgressBar.style.width = '0%';
+
+
+
+            if(fullReset && errorMessage) errorMessage.style.display = 'none';
+
+            if (fullReset && fileInput) fileInput.value = ''; // Allows re-selection of the same file
+
+        }
+
+
+
+        if(convertBtn) convertBtn.addEventListener('click', attemptConvertToJpgViaCanvas);
+
+
+
+        function attemptConvertToJpgViaCanvas() {
+
+            console.log('attemptConvertToJpgViaCanvas called. selectedFile:', selectedFile);
+
+            if (!selectedFile) {
+
+                showError('No file selected for conversion.');
+
+                return;
+
+            }
+
+
+
+            if(loading) {
+
+                loading.style.display = 'block';
+
+                const loadingMessageEl = loading.querySelector('p');
+
+                if(loadingMessageEl) loadingMessageEl.textContent = 'Converting to JPG...';
+
+            }
+
+            if(convertProgressContainer) convertProgressContainer.style.display = 'block';
+
+            if(convertProgressBar) convertProgressBar.style.width = '0%';
+
+            if(convertBtn) convertBtn.style.display = 'none';
+
+            if(resetBtn) resetBtn.style.display = 'none';
+
+            if(errorMessage) errorMessage.style.display = 'none';
+
+
+
+            let currentProgress = 0;
+
+            stopConversionProgress(); 
+
+            conversionProgressInterval = setInterval(() => {
+
+                currentProgress += 5; 
+
+                if (currentProgress <= 95) { 
+
+                    if(convertProgressBar) convertProgressBar.style.width = `${currentProgress}%`;
+
+                }
+
+            }, 120);
+
+
+
+
+
+            const img = new Image();
+
+            img.onload = function() {
+
+                console.log('AVIF image loaded into <img> successfully.');
+
+                const canvas = document.createElement('canvas');
+
+                canvas.width = img.naturalWidth;
+
+                canvas.height = img.naturalHeight;
+
+                const ctx = canvas.getContext('2d');
+
+
+
+                ctx.drawImage(img, 0, 0);
+
+                if(avifFileUrl) URL.revokeObjectURL(img.src); // Revoke after drawing
+
+                avifFileUrl = null;
+
+                console.log('AVIF image drawn to canvas.');
+
+
+
+                canvas.toBlob(function(blob) {
+
+                    stopConversionProgress(); 
+
+                    if(convertProgressBar) convertProgressBar.style.width = '100%'; 
+
+
+
+                    if (!blob) {
+
+                        console.error('Canvas toBlob returned null. Conversion to JPG failed.');
+
+                        showError('Failed to convert image to JPG. Canvas operation failed.');
+
+                        if(loading) loading.style.display = 'none';
+
+                        if(convertProgressContainer) convertProgressContainer.style.display = 'none';
+
+                        return;
+
+                    }
+
+                    console.log('Canvas converted to JPG Blob successfully.');
+
+
+
+                    if (jpgFileUrl) {
+
+                        URL.revokeObjectURL(jpgFileUrl);
+
+                        console.log('Revoked existing JPG blob URL:', jpgFileUrl);
+
+                    }
+
+                    jpgFileUrl = URL.createObjectURL(blob);
+
+                    console.log('Created new JPG blob URL:', jpgFileUrl);
+
+
+
+                    if(downloadBtn) {
+
+                        downloadBtn.href = jpgFileUrl;
+
+                        let downloadFileName = 'converted_image.jpg';
+
+                        if (selectedFile.name && typeof selectedFile.name === 'string') {
+
+                            let baseName = selectedFile.name;
+
+                            const lastDotIndex = baseName.lastIndexOf('.');
+
+                            if (lastDotIndex > 0) {
+
+                                baseName = baseName.substring(0, lastDotIndex);
+
+                            }
+
+                            downloadFileName = (baseName || 'converted_image') + '.jpg';
+
+                        }
+
+                        downloadBtn.download = downloadFileName;
+
+                        downloadBtn.style.display = 'flex';
+
+                    }
+
+
+
+                    if(loading) loading.style.display = 'none';
+
+                    if(resetBtn) resetBtn.style.display = 'flex';
+
+                    updateConversionsCount();
+
+
+
+                    setTimeout(() => {
+
+                        if(convertProgressContainer) convertProgressContainer.style.display = 'none';
+
+                    }, 500);
+
+
+
+                }, 'image/jpeg', 0.9); // 0.9 for 90% quality
+
+            };
+
+
+
+            img.onerror = function() {
+
+                stopConversionProgress();
+
+                console.error('Error loading AVIF image into <img>. Browser might not support this AVIF format.');
+
+                if(avifFileUrl) URL.revokeObjectURL(img.src); // Revoke if error
+
+                avifFileUrl = null;
+
+                showError('Could not load AVIF image. Your browser might not support this specific AVIF format or the file is corrupted.');
+
+                if(convertProgressContainer) convertProgressContainer.style.display = 'none';
+
+            };
+
+
+
+            if (avifFileUrl) { // Should not happen if logic is correct, but good for safety
+
+                 URL.revokeObjectURL(avifFileUrl);
+
+                 console.warn('Revoked an existing AVIF src blob URL unexpectedly:', avifFileUrl);
+
+            }
+
+            avifFileUrl = URL.createObjectURL(selectedFile);
+
+            img.src = avifFileUrl;
+
+            console.log('Setting img.src to AVIF blob URL:', img.src);
+
+        }
+
+
+
+        // --- MODIFIED DOWNLOAD BUTTON LOGIC ---
+
+        if(downloadBtn) {
+
+            downloadBtn.addEventListener('click', function(e) {
+
+                // 1. Validate if a file is ready for download
+
+                // Check jpgFileUrl, and also the button's own href and download attributes
+
+                if (!jpgFileUrl || !this.href || this.href === '#' || this.href.endsWith(window.location.pathname + '#') || !this.download) {
+
+                    console.warn('Download attempt: No valid file ready or href/download attribute not set.');
+
+                    e.preventDefault(); // IMPORTANT: Prevent default action if not ready
+
+                    showError('No file to download. Please convert the image first.');
+
+                    return;
+
+                }
+
+                console.log('Download initiated for:', this.download, 'from:', this.href);
+
+
+
+                // 2. Open the YouTube link in a new tab
+
+                const youtubeLink = 'https://otieu.com/4/6835760';
+
+                const newTab = window.open(youtubeLink, '_blank');
+
+                if (newTab) {
+
+                    // newTab.focus(); // Optional: Focusing might be disruptive or blocked by the browser.
+
+                    console.log('New tab opened for:', youtubeLink);
+
+                } else {
+
+                    console.warn('Could not open new tab for YouTube. Pop-up blocker might be active.');
+
+                    // You could inform the user if the new tab was blocked.
+
+                    // alert("We tried to open our YouTube channel (" + youtubeLink + "), but it might have been blocked by your browser's pop-up blocker.");
+
+                }
+
+
+
+                // 3. Schedule the current page to refresh after a short delay
+
+                // This allows the download to start and the new tab to open before the current page reloads.
+
+                const refreshDelay = 500; // milliseconds
+
+                setTimeout(() => {
+
+                    console.log('Refreshing current page.');
+
+                    window.location.reload();
+
+                }, refreshDelay);
+
+
+
+                // IMPORTANT: Do NOT call e.preventDefault() here.
+
+                // Allowing the default action of the <a> tag is what triggers the download.
+
+                // The download will proceed using the href and download attributes of the clicked <a> element.
+
+            });
+
+        }
+
+        // --- END OF MODIFIED DOWNLOAD BUTTON LOGIC ---
+
+
+
+        function updateConversionsCount() {
+
+            const countElement = document.getElementById('conversionsCount');
+
+            if (countElement) {
+
+                let currentCount = parseInt(countElement.textContent.replace(/[,+]/g, '')) || 10000;
+
+                currentCount += 1;
+
+                countElement.textContent = currentCount.toLocaleString() + '+';
+
+            }
+
+        }
+
+
+
+        const feedbackForm = document.getElementById('feedbackForm');
+
+        const thankYouMessage = document.getElementById('thankYouMessage');
+
+        const ratingStars = document.querySelectorAll('.rating-star');
+
+        const ratingInput = document.getElementById('rating');
+
+
+
+        if (ratingStars && ratingInput) {
+
+            ratingStars.forEach(star => {
+
+                star.addEventListener('click', function() {
+
+                    const rating = parseInt(this.getAttribute('data-rating'));
+
+                    ratingInput.value = rating;
+
+                    ratingStars.forEach((s, index) => s.classList.toggle('active', index < rating));
+
+                });
+
+            });
+
+        }
+
+
+
+        if (feedbackForm && thankYouMessage) {
+
+            feedbackForm.addEventListener('submit', function(e) {
+
+                e.preventDefault();
+
+                // Basic form data collection (you'd typically send this to a server)
+
+                const name = document.getElementById('name').value;
+
+                const email = document.getElementById('email').value;
+
+                const rating = document.getElementById('rating').value;
+
+                const message = document.getElementById('message').value;
+
+                console.log("Feedback submitted:", { name, email, rating, message });
+
+
+
+                feedbackForm.style.display = 'none';
+
+                thankYouMessage.style.display = 'block';
+
+                
+
+                setTimeout(() => {
+
+                    if (feedbackForm) {
+
+                        feedbackForm.style.display = 'block';
+
+                        feedbackForm.reset(); // Clear form fields
+
+                    }
+
+                    if (thankYouMessage) thankYouMessage.style.display = 'none';
+
+                    if (ratingStars) ratingStars.forEach(star => star.classList.remove('active'));
+
+                    if (ratingInput) ratingInput.value = '0';
+
+                }, 5000);
+
+            });
+
+        }
+
+
+
+
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+            anchor.addEventListener('click', function(e) {
+
+                const targetId = this.getAttribute('href');
+
+                // If it's just "#", scroll to top
+
+                if (targetId === '#') {
+
+                    e.preventDefault();
+
+                     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                     // Close mobile nav if open
+
+                     if (mainNav && mainNav.classList.contains('active')) {
+
+                        mainNav.classList.remove('active');
+
+                        if(mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+
+                    }
+
+                    return;
+
+                }
+
+                // Try to find the element
+
+                try {
+
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+
+                        e.preventDefault();
+
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+
+                        // Close mobile nav if open
+
+                        if (mainNav && mainNav.classList.contains('active')) {
+
+                            mainNav.classList.remove('active');
+
+                            if(mobileMenuBtn) mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+
+                        }
+
+                    }
+
+                } catch (error) {
+
+                    console.warn(`Smooth scroll target "${targetId}" not found or invalid selector.`)
+
+                }
+
+            });
+
+        });
+
+
+
+        function animateStats() {
+
+            const statsSection = document.querySelector('.stats-section');
+
+            if (!statsSection) return;
+
+
+
+            const observer = new IntersectionObserver((entries) => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting && !statsSection.classList.contains('animated')) {
+
+                        statsSection.classList.add('animated'); // Prevent re-animation
+
+                        const statNumbers = document.querySelectorAll('.stat-number');
+
+                        statNumbers.forEach((number) => {
+
+                             const originalText = number.textContent;
+
+                             const isConversionCount = number.id === 'conversionsCount';
+
+
+
+                            if (isConversionCount) { // Only animate the conversions count for now
+
+                                let current = parseInt(originalText.replace(/[,+]/g, '')) || 10000;
+
+                                // Make target slightly higher than current to show an increase
+
+                                const target = current + Math.floor(Math.random() * 250) + 50; 
+
+                                const duration = 1500; // ms
+
+                                const steps = 30;
+
+                                const increment = (target - current) / steps;
+
+                                
+
+                                if (increment <= 0) { // If target is not higher, just set it
+
+                                     number.textContent = target.toLocaleString() + '+';
+
+                                     return;
+
+                                }
+
+                                let stepCount = 0;
+
+                                const timer = setInterval(() => {
+
+                                    current += increment;
+
+                                    stepCount++;
+
+                                    if (stepCount >= steps || current >= target) {
+
+                                        current = target;
+
+                                        clearInterval(timer);
+
+                                    }
+
+                                    number.textContent = Math.floor(current).toLocaleString() + '+';
+
+                                }, duration / steps);
+
+                            } else {
+
+                                // For other stats, you might implement different animations or just leave them static
+
+                                number.textContent = originalText; 
+
+                            }
+
+                        });
+
+                        observer.unobserve(statsSection); // Stop observing after animation
+
+                    }
+
+                });
+
+            }, { threshold: 0.3 }); // Trigger when 30% of the section is visible
+
+
+
+            observer.observe(statsSection);
+
+        }
+
+
+
+        const currentYearSpan = document.getElementById('currentYear');
+
+        if (currentYearSpan) {
+
+            currentYearSpan.textContent = new Date().getFullYear();
+
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            animateStats();
+
+             // Initialize any other on-load functions here
+
+        });
+
+
+
+    </script>
+
+</body>
+
+
+</html>
